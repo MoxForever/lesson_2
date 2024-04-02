@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="/" method="GET">
+            <label for="query">Поиск:</label>
+            <input type="text" name="query" id="query"><br>
+            <button type="submit">Поиск</button>
+            <a href="/">Сбросить</a>
+        </form>
+        <ul>
+            {% for p in products %}
+                <li>{{ p[0] }}: {{ p[1] }}</li>
+            {% endfor %}
+        </ul>
+        <a href="/add">Добавить товар</a>
+        <a href="/buy">Купить</a>
+    </body>
+</html>
