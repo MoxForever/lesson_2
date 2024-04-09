@@ -6,12 +6,33 @@
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
+        <style>
+            body {
+                margin: 0;
+                width: 100vw;
+                height: 100vh;
+            }
+
+            form {
+                width: 500px;
+                margin: 10px;
+                background-color: darkgray;
+                border-radius: 10px;
+                padding: 10px;
+            }
+
+            ul {
+                font-size: 32px;
+                list-style: none;
+            }
+        </style>
     </head>
     <body>
         <form action="/" method="GET">
             <label for="query">Поиск:</label>
-            <input type="text" name="query" id="query"><br>
+            <input type="text" name="query" id="query">
             <button type="submit">Поиск</button>
+            <br>
             <a href="/">Сбросить</a>
         </form>
         <ul>
@@ -19,7 +40,7 @@
                 <li>{{ p[0] }}: {{ p[1] }}</li>
             {% endfor %}
         </ul>
-        <a href="/add">Добавить товар</a>
+        <a href="/add">Добавить товар</a><br>
         <a href="/buy">Купить</a>
     </body>
 </html>
